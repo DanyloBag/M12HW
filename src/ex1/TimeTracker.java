@@ -27,6 +27,11 @@ public class TimeTracker {
         });
 
         Thread messageThread = new Thread(() -> {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             while (true) {
                 printMessage("Минуло 5 секунд");
 
